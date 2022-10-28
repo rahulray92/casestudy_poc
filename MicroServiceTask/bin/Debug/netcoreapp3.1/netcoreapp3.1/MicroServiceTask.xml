@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicroServiceTask</name>
+    </assembly>
+    <members>
+        <member name="T:MicroServiceTask.AutoMappingConfig.AutoMapperProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MicroServiceTask.Controller.TaskController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MicroServiceTask.Controller.TaskController.#ctor(MediatR.IMediator,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="mediator"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:MicroServiceTask.Controller.TaskController.Create(MicroServiceTask.Feature.TaskFeature.Commands.AssignTaskCommand)">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MicroServiceTask.Controller.TaskController.GetAll(System.String,MicroServiceTask.Feature.TaskFeature.Commands.AssignTaskCommand)">
+            <summary>
+            
+            </summary>
+            <param name="memberId"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MicroServiceTask.Repository.Interface.IRepositoryMember`1">
+            <summary>
+            IRepositoryMember
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:MicroServiceTask.Repository.Interface.IRepositoryMember`1.AddNewMember(`0)">
+            <summary>
+            AddNewMember
+            </summary>
+            <param name="_object"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MicroServiceTask.Repository.Interface.IRepositoryMember`1.Update(`0)">
+            <summary>
+            Update
+            </summary>
+            <param name="_object"></param>
+        </member>
+        <member name="M:MicroServiceTask.Repository.Interface.IRepositoryMember`1.GetAll">
+            <summary>
+            GetAll
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MicroServiceTask.Repository.Interface.IRepositoryMember`1.GetById(System.Int32)">
+            <summary>
+            GetById
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MicroServiceTask.Repository.Interface.IRepositoryMember`1.Delete(`0)">
+            <summary>
+            Delete
+            </summary>
+            <param name="_object"></param>
+        </member>
+        <member name="T:MicroServiceTask.Repository.RepositoryMember">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:MicroServiceTask.ViewModel.GetTaskDto">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

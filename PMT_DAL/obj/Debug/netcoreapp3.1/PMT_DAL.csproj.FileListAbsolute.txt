@@ -1,0 +1,13 @@
+D:\PMTAPI\PMTUC\PMT_DAL\bin\Debug\netcoreapp3.1\PMT_DAL.deps.json
+D:\PMTAPI\PMTUC\PMT_DAL\bin\Debug\netcoreapp3.1\PMT_DAL.runtimeconfig.json
+D:\PMTAPI\PMTUC\PMT_DAL\bin\Debug\netcoreapp3.1\PMT_DAL.runtimeconfig.dev.json
+D:\PMTAPI\PMTUC\PMT_DAL\bin\Debug\netcoreapp3.1\PMT_DAL.dll
+D:\PMTAPI\PMTUC\PMT_DAL\bin\Debug\netcoreapp3.1\PMT_DAL.pdb
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.csproj.AssemblyReference.cache
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.AssemblyInfoInputs.cache
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.AssemblyInfo.cs
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.csproj.CoreCompileInputs.cache
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.dll
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.pdb
+D:\PMTAPI\PMTUC\PMT_DAL\obj\Debug\netcoreapp3.1\PMT_DAL.genruntimeconfig.cache

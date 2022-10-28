@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PMTUC</name>
+    </assembly>
+    <members>
+        <member name="T:PMTUC.Controller.AuthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PMTUC.Controller.AuthController.#ctor(PMT_DAL.Interface.IAuthRepository{PMT_DAL.Models.User},PMT_BAL.Service.AuthService,Microsoft.Extensions.Logging.ILogger{PMTUC.Controller.AuthController})">
+            <summary>
+            ManagerController
+            </summary>
+            <param name="user"></param>
+            <param name="authService"></param>
+            <param name="tasks"></param>
+            <param name="taskService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:PMTUC.Controller.AuthController.login(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMTUC.Controller.AuthController.Register(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PMTUC.Controller.ManagerController">
+            <summary>
+            ManagerController
+            </summary>
+        </member>
+        <member name="M:PMTUC.Controller.ManagerController.#ctor(PMT_DAL.Interface.IRepository{PMT_DAL.Models.Member},PMT_BAL.Service.MemberService,Microsoft.Extensions.Logging.ILogger{PMTUC.Controller.ManagerController})">
+            <summary>
+            ManagerController
+            </summary>
+            <param name="member"></param>
+            <param name="memberService"></param>
+            <param name="tasks"></param>
+            <param name="taskService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:PMTUC.Controller.ManagerController.List(PMTUC.Model.Request.MemberRequest)">
+            <summary>
+            list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMTUC.Controller.ManagerController.Addmember(PMT_DAL.Models.Member)">
+            <summary>
+            Add new member
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PMTUC.Controller.ManagerController.UpdateAllocationPercentage(System.Int32,System.Int32)">
+            <summary>
+            list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PMTUC.Model.Request.MemberRequest">
+            <summary>
+            MemberRequest
+            </summary>
+        </member>
+        <member name="T:PMTUC.Model.ServiceResponse`1">
+            <summary>
+            service Response
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:PMTUC.Model.ServiceResponse`1.Data">
+            <summary>
+            data
+            </summary>
+        </member>
+        <member name="P:PMTUC.Model.ServiceResponse`1.Success">
+            <summary>
+            successs
+            </summary>
+        </member>
+        <member name="P:PMTUC.Model.ServiceResponse`1.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="M:PMTUC.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            sum
+            </summary>
+            <param name="services"></param>
+        </member>
+    </members>
+</doc>

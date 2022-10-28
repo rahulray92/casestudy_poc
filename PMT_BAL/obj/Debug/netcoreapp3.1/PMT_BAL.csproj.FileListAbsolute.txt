@@ -1,0 +1,16 @@
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_BAL.deps.json
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_BAL.runtimeconfig.json
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_BAL.runtimeconfig.dev.json
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_BAL.dll
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_BAL.pdb
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_DAL.dll
+D:\PMTAPI\PMTUC\PMT_BAL\bin\Debug\netcoreapp3.1\PMT_DAL.pdb
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.csproj.AssemblyReference.cache
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.AssemblyInfoInputs.cache
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.AssemblyInfo.cs
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.csproj.CoreCompileInputs.cache
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.dll
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.pdb
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.genruntimeconfig.cache
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.csproj.CopyComplete
