@@ -10,7 +10,7 @@ D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.GeneratedMSBuildEditorCo
 D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.AssemblyInfoInputs.cache
 D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.AssemblyInfo.cs
 D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.csproj.CoreCompileInputs.cache
+D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.csproj.CopyComplete
 D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.dll
 D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.pdb
 D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.genruntimeconfig.cache
-D:\PMTAPI\PMTUC\PMT_BAL\obj\Debug\netcoreapp3.1\PMT_BAL.csproj.CopyComplete

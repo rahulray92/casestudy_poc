@@ -35,7 +35,7 @@ namespace PMTUC
         }
 
         public IConfiguration Configuration { get; }
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         // This method gets called by the runtime. Use this method to add services to the container.
         /// <summary>
         /// sum
@@ -81,8 +81,21 @@ namespace PMTUC
                     ValidateAudience = false
                 };
             });
+            services.AddCors();
             //services.AddEndPointApiExplorer();
             //services.AddMvc(x => x.Conventions.Add(new ApiExplorerVersionConvention()));
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(MyAllowSpecificOrigins,
+            //    builder =>
+            //    {
+            //        builder.WithOrigins("http://localhost:53135",
+            //                            "http://localhost:4200"
+            //                            )
+            //                            .AllowAnyHeader()
+            //                            .AllowAnyMethod();
+            //    });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -109,8 +122,9 @@ namespace PMTUC
             });
             
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
+            //app.UseStaticFiles();
+            // app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

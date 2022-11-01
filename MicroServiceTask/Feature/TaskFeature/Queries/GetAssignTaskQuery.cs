@@ -28,6 +28,7 @@ namespace MicroServiceTask.Feature.TaskFeature.Queries
             }
             public async Task<IEnumerable<TaskModel>> Handle(GetAssignTaskQuery query, CancellationToken cancellationToken)
             {
+                
                 var taskList = await (from m in _context.Members
                             join t in _context.Tasks
                             on m.MemberId equals t.MemberId
@@ -48,9 +49,26 @@ namespace MicroServiceTask.Feature.TaskFeature.Queries
 
                 //var taskList = await _context.Tasks.Where(x=>x.MemberId==query.memberId ||x.TaskName.ToLower().Trim()==(query.TaskName==null?string.Empty:query.TaskName.ToLower().Trim())
                 //|| x.Deliverables.ToLower().Trim() == (query.Deliverables == null ? string.Empty : query.Deliverables.ToLower().Trim())|| x.TaskstartDate.ToLower().Trim() == (query.TaskstartDate == null ? string.Empty : query.TaskstartDate.ToLower().Trim())|| x.TaskendDate.ToLower().Trim() == (query.TaskendDate == null ? string.Empty : query.TaskendDate.ToLower().Trim())).ToListAsync();
-                if (taskList == null)
+                if (taskList.Count==0)
                 {
-                    return null;
+                    var taskLis1t = await (from m in _context.Members
+                                          join t in _context.Tasks
+                                          on m.MemberId equals t.MemberId
+                                          where t.MemberId != 0
+                             
+                                          select new TaskModel
+                                          {
+                                              MemberId = t.MemberId,
+                                              MemberName = t.MemberName,
+                                              TaskName = t.TaskName,
+                                              Deliverables = t.Deliverables,
+                                              TaskendDate = t.TaskendDate,
+                                              TaskstartDate = t.TaskstartDate,
+                                              ProjectstartDate = m.ProjectstartDate,
+                                              ProjectendDate = m.ProjectendDate,
+                                              AllocationPercentage = m.AllocationPercentage
+                                          }).ToListAsync();
+                    return taskLis1t.AsReadOnly(); ;
                 }
                 return taskList.AsReadOnly();
             }

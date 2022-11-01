@@ -32,17 +32,27 @@ namespace MicroServiceTask
         }
 
         public IConfiguration Configuration { get; }
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            // In production, the Angular files will be served from this directory  
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/dist";
+                
+            });
+            
             services.AddTransient<IRepositoryTask<PMTATask>, RepositoryTask>();
             services.AddTransient<IRepositoryMember<Member>, RepositoryMember>();
             services.AddTransient<IApplicationDbContext, ApplicationDbContext>();
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddCors();
             services.AddMvcCore()
+
         .AddApiExplorer();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             #region Swagger
@@ -80,6 +90,18 @@ namespace MicroServiceTask
             #endregion
             services.AddControllers();
             //services.AddRazorPages();
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(MyAllowSpecificOrigins,
+            //    builder =>
+            //    {
+            //        builder.WithOrigins("http://localhost:53135",
+            //                            "http://localhost:4200"
+            //                            )
+            //                            .AllowAnyHeader()
+            //                            .AllowAnyMethod();
+            //    });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,8 +127,9 @@ namespace MicroServiceTask
             });
             #endregion
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
+            //app.UseStaticFiles();
+            //app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200/"));
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

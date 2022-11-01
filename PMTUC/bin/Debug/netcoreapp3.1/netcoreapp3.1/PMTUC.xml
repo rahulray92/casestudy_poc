@@ -19,7 +19,7 @@
             <param name="taskService"></param>
             <param name="logger"></param>
         </member>
-        <member name="M:PMTUC.Controller.AuthController.login(System.String,System.String)">
+        <member name="M:PMTUC.Controller.AuthController.login(PMTUC.Model.Request.UserLoginRequest)">
             <summary>
             
             </summary>

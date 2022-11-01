@@ -4,6 +4,7 @@ using PMT_BAL.Service;
 using PMT_DAL.Interface;
 using PMT_DAL.Models;
 using PMTUC.Model;
+using PMTUC.Model.Request;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace PMTUC.Controller
     /// <summary>
     /// 
     /// </summary>
+ [Route("api")]
     public class AuthController : ControllerBase
     {
         private readonly AuthService _authService;
@@ -42,10 +44,10 @@ namespace PMTUC.Controller
         /// </summary>
         /// <returns></returns>
         [HttpPost("login")]
-        public async Task<ActionResult<ServiceResponse<string>>> login([FromQuery] string UserName, [FromQuery] string Password)
+        public async Task<ActionResult<ServiceResponse<string>>> login([FromBody] UserLoginRequest request)
         {
             var response = await _authService.Login(
-                UserName, Password
+                request.username, request.password
             );
 
             if (!response.Success)

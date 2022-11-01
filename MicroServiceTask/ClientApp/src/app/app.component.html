@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+  <span>
+    <button mat-button routerLink="/">{{title}}</button>
+
+  </span>
+  <div *ngIf="isAuthenticated" fxLayout="row" fxShow="false" fxShow.gt-sm style="display: flex;
+  justify-content: flex-end;
+  flex-basis: content;
+  flex: auto;">
+    <h3 style="margin-top: 0.7rem;font-size: 14px;">Hi {{currentUser.firstName}}!</h3>
+
+    <span style="margin: 1rem;
+    cursor: pointer;font-size: 17px;" class="material-icons red-color" (click)="logout()">logout </span>
+  </div>
+
+</mat-toolbar>
+
+
+
+<router-outlet></router-outlet>

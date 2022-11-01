@@ -1,0 +1,92 @@
+.split {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#mySidenavleftmenuinnerinner {
+  height: 100%;
+  width: 100%;
+  background-color: #E7E9EB;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-left: 7px;
+}
+/* Control the left side */
+.left {
+  left: 7px;
+  background-color: #E7E9EB;
+  ;
+  ;
+}
+
+/* Control the right side */
+.right {
+  right: 7px;
+  background-color: white;
+  width: 85%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #f1f1f1;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+  .sidenav a {
+    /* font-family: "Segoe UI",Arial,sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 2px 1px 1px 16px; */
+    background-color: #b8bdb766;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 6px 18px 9px;
+    color: #020101;
+    ;
+    border-radius: 99em;
+    text-decoration: none;
+    width: 11.5%;
+    max-width: 11.5%;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+  }
+
+    .sidenav a:hover {
+      color: #000000;
+      background-color: #af989852 !important;
+    }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 10px;
+  }
+
+    .sidenav a {
+      font-size: 14px;
+    }
+}
+
+.active_class {
+  background-color: white !important;
+}

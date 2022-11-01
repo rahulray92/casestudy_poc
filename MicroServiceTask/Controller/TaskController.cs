@@ -16,7 +16,7 @@ namespace MicroServiceTask.Controller
     /// <summary>
     /// 
     /// </summary>
-    [Authorize]
+   // [Authorize]
     [ApiController]
     [Route("projectmgmt/api/v1/")]
     public class TaskController : ControllerBase
@@ -77,24 +77,6 @@ namespace MicroServiceTask.Controller
             return serviceResponse;
             // return Ok(await _mediator.Send(new GetAssignTaskQuery { memberId = Convert.ToInt64(memberId), TaskName= TaskName, Deliverables= Deliverables, TaskstartDate= TaskstartDate, TaskendDate = TaskendDate }));
         }
-        //[HttpGet, Route("member/list/{memberId}")]
-        //public async Task<IActionResult> GetById(Int64 memberId)
-        //{
-        //    return Ok(await _mediator.Send(new GetAssignTaskByIdQuery { Id = memberId }));
-        //}
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> Delete(int id)
-        //{
-        //    return Ok(await Mediator.Send(new DeleteProductByIdCommand { Id = id }));
-        //}
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> Update(int id, UpdateProductCommand command)
-        //{
-        //    if (id != command.Id)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    return Ok(await Mediator.Send(command));
-        //}
+       
     }
 }

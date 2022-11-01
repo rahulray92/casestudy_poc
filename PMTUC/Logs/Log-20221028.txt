@@ -1,3 +1,6 @@
 2022-10-28T09:23:47.0421427+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
 2022-10-28T09:23:47.0573368+05:30  [INF] Hosting environment: "Development" (c3307c92)
 2022-10-28T09:23:47.0624133+05:30  [INF] Content root path: "D:\PMTAPI\PMTUC\PMTUC" (b5d60022)
+2022-10-28T13:02:54.8757529+05:30  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-10-28T13:02:54.8884933+05:30  [INF] Hosting environment: "Development" (c3307c92)
+2022-10-28T13:02:54.9023304+05:30  [INF] Content root path: "D:\PMTAPI\PMTUC\PMTUC" (b5d60022)
