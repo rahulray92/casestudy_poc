@@ -17,9 +17,9 @@ namespace PMTUC.Controller
     /// <summary>
     /// ManagerController
     /// </summary>
-    [Authorize]
+    //[Authorize]
     [ApiController]
-    [Route("projectmgmt/api/v1/")]   
+    [Route("projectmgmts/api/v1/")]   
    
     public class ManagerController : ControllerBase
     {
@@ -161,16 +161,16 @@ namespace PMTUC.Controller
         /// list
         /// </summary>
         /// <returns></returns>
-        [HttpPut("manager/update/{allocationPercentage}")]
+        [HttpPost("manager/update")]
 
-        public Object UpdateAllocationPercentage(int allocationPercentage, int memberId)
+        public Object UpdateAllocationPercentage(AllocationRequest request)
         {
             try
             {
                 _logger.LogInformation("Starting UpdateAllocationPercentage method...");
                 var data = new Member();
-                data.AllocationPercentage = Convert.ToString(allocationPercentage);
-                data.MemberId = memberId;
+                data.AllocationPercentage = Convert.ToString(request.allocationPercentage);
+                data.MemberId = request.memberId;
                 var data1 = _memberService.UpdateAllocationPercentage(data);
                 var json = JsonConvert.SerializeObject(data1, Formatting.Indented,
                     new JsonSerializerSettings()

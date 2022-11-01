@@ -17,7 +17,7 @@ export class TaskComponent implements OnInit, OnDestroy {
   search: string = '';
   searchDetails: any;
   taskData:any;
-  isPopup: boolean = false; editLoanForm: FormGroup; submitted = false; taskList: Array<any> = [];
+  isPopup: boolean = false; editTaskForm: FormGroup; submitted = false; taskList: Array<any> = [];
   message: string = ''; currentRoute: string; currentUser: User; isAccessRole: boolean = false;
   paramSubscription: Subscription;
   deliverables: string = '';
@@ -43,12 +43,11 @@ export class TaskComponent implements OnInit, OnDestroy {
     })
     this.taskData = sessionStorage.getItem('taskList') == null ? null : JSON.parse(sessionStorage.getItem('taskList') || '');
 
-    if (this.taskData == null)
-      this.message = "There are no any record exists."
+    
   }
 
   // convenience getter for easy access to form fields
-  get f() { return this.editLoanForm.controls; }
+  get f() { return this.editTaskForm.controls; }
 
   searchloan() {
     this.message = '';
@@ -76,19 +75,13 @@ export class TaskComponent implements OnInit, OnDestroy {
     //   const [file] = event.target.files;
     // }
   }
-  edit(loanNo: any) {
+  edit(memberId: any) {
 
-    //let loanDetails = this.taskData.find(x => x.loanno == loanNo);
-    //this.editLoanForm = this.formBuilder.group({
-    //  fname: [loanDetails.fname, Validators.required],
-    //  lname: [loanDetails.lname, Validators.required],
-    //  lamount: [loanDetails.lamount, Validators.required],
-    //  loannumber: [loanDetails.loanno, Validators.required],
-    //  ltype: ['' + loanDetails.ltype + '', Validators.required],
-    //  lterm: ['' + loanDetails.lterm + '', Validators.required],
-    //  sex: [0, Validators.required],
-    //  padress: [loanDetails.padress, Validators.required],
-    //});
+    let taskDetails = this.taskList.find(x => x.memberId == memberId);
+    this.editTaskForm = this.formBuilder.group({
+      allocationPercentage: [taskDetails.allocationPercentage, Validators.required],
+      memberId: [taskDetails.memberId]
+    });
     if (!this.isPopup)
       this.isPopup = true;
     else
@@ -101,24 +94,19 @@ export class TaskComponent implements OnInit, OnDestroy {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     let datetoday = mm + '/' + dd + '/' + yyyy;
-    let data: Array<any> = sessionStorage.getItem("taskList") == null ? null : JSON.parse(sessionStorage.getItem("taskList") || '')
-
-    let NewData = []
-    //let index = data.findIndex(x => x.loanno == this.f.loannumber.value);
-    //data.splice(index, 1);
-
-    let obj = {
-      //'status': 'Inprogress', 'fname': this.f.fname.value, 'ltype': this.f.ltype.value, 'lterm': this.f.lterm.value, 'sex': this.f.sex.value,
-      //'lname': this.f.lname.value, 'loanno': this.f.loannumber.value, 'paddress': this.f.padress.value, 'AssignTo': '', 'createddate': datetoday, 'lamount': this.f.lamount.value
-    }
-    //this.loanList.push(obj);
-    data.push(obj);
-    sessionStorage.setItem("taskList", JSON.stringify(data));
+   
+   
+    this.taskService.updateAllocation(this.f['allocationPercentage'].value, this.f['memberId'].value)
+      .subscribe(data => {
+        console.log(data);
+      });
+   
     this.submitted = true;
     this.isPopup = false;
     this.toastr.success('Updated succesfully!');
     this.search = '';
     this.searchDetails = undefined;
+    this.TaskView();
   }
   close() {
     this.isPopup = false;
@@ -127,11 +115,13 @@ export class TaskComponent implements OnInit, OnDestroy {
     this.paramSubscription.unsubscribe();
   }
   TaskView() {
+    this.message = '';
     this.taskService.taskview(this.deliverables, this.taskName, this.taskstartDate, this.taskendDate, this.memberId)
       .subscribe(data => {
         if (data.data != null)
           this.taskList = data.data;
-        console.log(data);
+        if (data.data.length==0)
+          this.message = "There are no any record exists."
       })
   }
 

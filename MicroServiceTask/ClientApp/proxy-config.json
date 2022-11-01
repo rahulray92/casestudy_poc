@@ -6,6 +6,10 @@
   "/projectmgmt/api/v1/": {
     "target": "https://localhost:44328/",
     "secure": false
+  },
+  "/projectmgmts/api/v1/": {
+    "target": "https://localhost:44396/",
+    "secure": false
   }
 }
 

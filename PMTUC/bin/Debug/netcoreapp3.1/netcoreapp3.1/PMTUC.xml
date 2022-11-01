@@ -60,7 +60,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:PMTUC.Controller.ManagerController.UpdateAllocationPercentage(System.Int32,System.Int32)">
+        <member name="M:PMTUC.Controller.ManagerController.UpdateAllocationPercentage(PMTUC.Model.Request.AllocationRequest)">
             <summary>
             list
             </summary>

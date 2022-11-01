@@ -59,16 +59,16 @@ background-color: #6633991f;">
         <div class="content">
           <mat-card class="my-card">
             <mat-card-content>
-              <form class="my-form" [formGroup]="editLoanForm" (ngSubmit)="onUpdate()">
+              <form class="my-form" [formGroup]="editTaskForm" (ngSubmit)="onUpdate()">
 
 
 
                 <mat-form-field class="full-width" style="margin-right: 5rem;
                            display: inline;">
                   <mat-label>Allocation Percentage</mat-label>
-                  <input matInput type="text" placeholder="Allocation Percentage" name="lamount" formControlName="lamount" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['lamount'].errors }">
-                  <div *ngIf="submitted && f['lamount'].errors" class="invalid-feedback">
-                    <div *ngIf="f['lamount'].errors['required']">Allocation Percentage</div>
+                  <input matInput type="text" placeholder="Allocation Percentage" name="allocationPercentage" formControlName="allocationPercentage" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['allocationPercentage'].errors }">
+                  <div *ngIf="submitted && f['allocationPercentage'].errors" class="invalid-feedback">
+                    <div *ngIf="f['allocationPercentage'].errors['required']">Allocation Percentage</div>
                   </div>
                 </mat-form-field>
                
